@@ -3,9 +3,12 @@ package com.example.hellospring.service;
 import com.example.hellospring.domain.Member;
 import com.example.hellospring.repository.MemberRepository;
 import com.example.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
 
 public class MemberService {
 
@@ -16,6 +19,9 @@ public class MemberService {
     //따라서 생성자를 만들어 매번 같은 인스턴스로 데이터다훈다
     //이를 의존성 주입이라고한다.
     private final MemberRepository memberRepository;
+    //메모리 멤버 레포지토리를 사용한다 현
+    //컨트롤러와 서비스를 연결한다 의존성주입
+
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }

@@ -2,8 +2,7 @@ package com.example.hellospring.repository;
 
 import java.util.*;
 import com.example.hellospring.domain.Member;
-
-
+import org.springframework.stereotype.Repository;
 
 
 //메모리구현체의 멤버 리포지토리에 대한 클래스이다
