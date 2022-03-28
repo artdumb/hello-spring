@@ -7,6 +7,7 @@ import com.example.hellospring.repository.MemoryMemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.test.annotation.Commit;
 
 
 class MemberServiceTest {
@@ -26,10 +27,11 @@ class MemberServiceTest {
         memberRepository.clearStore();
     }
     @Test
-    void 회원가입() {
+    @Commit
+     void 회원가입() {
         //given
         Member member = new Member();
-        member.setName("hello");
+        member.setName("hello222");
         //when
         Long savedId = memberService.join(member);
         //then
